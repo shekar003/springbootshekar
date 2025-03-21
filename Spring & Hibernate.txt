@@ -1,4 +1,4 @@
-1. Create Project
+1. Create Project (Shekar)
 2. Create Spring Configuration (AbstractAnnotationConfigDispatcherSerlvetInitializer)
 3. Create Spring MVC Configuration (WebMvcConfigurer)
 	a) @Configuration 
