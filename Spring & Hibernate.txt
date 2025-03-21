@@ -1,0 +1,137 @@
+1. Create Project
+2. Create Spring Configuration (AbstractAnnotationConfigDispatcherSerlvetInitializer)
+3. Create Spring MVC Configuration (WebMvcConfigurer)
+	a) @Configuration 
+	b) @ComponentScan
+	c) @EnableWebMvc
+	d) ViewResolver (Bean)
+
+4. Create HibernateConfiguration
+	a) @Configuration
+	b) @EnableTransactionManagement, Transactional - Spring (Mandatory)
+	c) @Bean
+	d) LocalSessionFactoryBean(setPackagesToScan) 
+	e) DriverManagerDataSource - Spring	! Apachedbcp = BasicDataSource !
+	f) HibernateTransactionManager - Spring
+	 
+
+5. Controller
+	a) @ModelAttribute to get form data
+	b) @RequestMapping
+	c) use ModelAndView object to send data to JSP and to set jsp name
+	d) return ModelAndView Object
+	
+
+6. DAO
+	a) Dao ---> DaoImpl (@Repository) --> getCurrentSession by using sessionFactory which is autowired.
+	b) Service ---> ServiceImpl(@Service)
+	c) 
+
+
+7. @Bean can't be Annotated for private methods.
+
+
+8. @Service & @Repository are mandatory 
+	Both @Repositories are working
+	Both @Services are working
+
+9. No need of configuring HibernateConfiguration file in AbstractAnnotationConfigDispatcherServletInitializer
+
+10. @Configuration is mandatory only in HibernateConfiguration file
+
+11. new HibernateTransactionManager().setSession(getSession().getObject()); is Mandatory
+
+12. localSessionFactoryBean.setPackagesToScan(); to scan the Entities
+
+13. If you don't use this annotation you might not initially notice any difference but things like content-type and accept header, generally content negotiation won't work.
+
+14. WebMvcConfigurer navigates the app and EnableWebMvc gives the permission
+
+
+
+15 .					WebApplicationInitializer        	(onStartup, Interface)
+						   |
+				      AbstractContextLoaderListner 			(Class)
+						   |
+				   AbstractDispatcherServletInitializer 		(Class)
+						   |
+			    AbstractAnnotationConfigDispatcherServletInitilizer		(Class)
+
+
+16. 
+
+
+
+
+		   
+JSP----------- 
+
+
+1. No sumbit button if it is form, It checks action attribute. 
+2. If we have to use @ModelAttribute we have to use Spring Tags.
+3. "value" attribute is mandatory for JSTL <out> tag.
+4. If it is forEach use variable, If it is out use method() to retrive value in JSP.
+5. use <out> to get ModelandView Object in jsp.
+
+
+
+
+
+
+
+JPA-----------
+
+1. GeneratedValue(Creates hibernate_sequence table and stores the next primary key Id)
+
+2. GeneratedValue(strategy=GenerationType.AUTO) -  (Creates hibernate_sequence table and stores the next primary key Id)
+
+3. GeneratedValue(strategy=GenerationType.IDENTITY) - Asking Field 'id' doesn't have a default value'
+
+4. GeneratedValue(strategy=GenerationType.SEQUENCE) - (Creates hibernate_sequence table and stores the next primary key Id)
+
+5. GeneratedValue(strategy=GenerationType.TABLE) - creates column 'sequenc_name' = default ---- (Creates hibernate_sequence table and stores the next primary key Id)
+
+6. Error = public key retrieval is not allowed = Error with hiberante_sequence table (delete it)
+
+
+
+
+
+
+
+
+
+
+				a) spring-webmvc
+				b) spring-orm
+				c) hibernate-core
+				d) 
+
+
+
+
+
+
+
+
+
+
+
+
+
+MuleSoft----- Java Based Enterprise Service Bus & Integration Platform
+
+1. Anypiont Designer
+2. Anypoint Connectors
+3. Anypoint Analytics
+4. Anypoing Runtime Manager
+5. Anypoint Exchange
+6. Anypoing Monitoring
+7. Anypoint Visualizer
+8. 
+
+
+
+
+
+
